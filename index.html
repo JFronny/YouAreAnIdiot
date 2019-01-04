@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WARNING: DO NOT PROCEED</title>
+    <script>
+        var q = ['p0', 'p1', 'p2'];
+        function SetA(s) {
+            q.forEach(T);
+            document.getElementById(s).style.display = 'block';
+        }
+        
+        function T(item, index) {
+            document.getElementById(item).style.display = 'none';
+        }
+    </script>
+</head>
+<body onload="SetA('p1')">
+    <div id="p0">
+        You need JAVASCRIPT for this site.
+    </div>
+    <div id="p1" style="display: none;">
+        The page you are about to visit contains a virus. Are you sure that you want to continue?<br>
+        <a href="#" onclick="SetA('p2')">YES</a><br>
+        <a href="#" onclick="window.location = 'about:blank'">NO</a>
+    </div>
+    <div id="p2" style="display: none;">
+        <a href="#" onclick="SetA('p1')">BACK</a><br>
+        <a href="original">ORIGINAL</a>
+    </div>
+</body>
+</html>
